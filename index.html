@@ -3,6 +3,16 @@
 <head>
     <title>朱老師的家教資料</title>
     <style>
+		body.rotated {
+    transform: rotate(90deg);
+    width: 100vh;
+    height: 100vw;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -43,10 +53,11 @@
 	
     <img src="images\Toeic.jpg" alt="Toeic">
    <!-- Existing Header and Body Start Tags Omitted for Brevity -->
-
+	</div>
 <div class="container">
     <h2>家長推薦信</h2>
     <p>(手機用橫屏更好閱讀)</p>
+<button id="rotateButton">Rotate View</button>
 
 		<h3>王麗娟媽媽推薦</h3>
 		<img src="images\麗娟1.jpg" alt="麗娟1">
@@ -84,7 +95,7 @@
 		<h3>Howard媽媽推薦</h3>
 		<img src="images\皓文.png" alt="皓文">
 
-
+	</div>
 
 <div class="container">
     <h2>收費標準</h2>
@@ -167,11 +178,10 @@
     <p>Line: i14d14</p>
 </div>
 
-<!-- Closing body and html tags -->
-</body>
-</html>
-
-</div>
-
-</body>
+<script>
+  document.getElementById('rotateButton').addEventListener('click', function() {
+    document.body.classList.toggle('rotated');
+  });
+</script>
+	</body>
 </html>
